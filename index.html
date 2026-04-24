@@ -7,22 +7,36 @@
 
   <style>
     body {
-      background: #111;
-      color: white;
-      font-family: Arial;
-      text-align: center;
       margin: 0;
+      font-family: Arial;
+      color: white;
+
+      /* 🔥 STACKED / TILED BACKGROUND DOWN THE PAGE */
+      background-image: url("https://tr.rbxcdn.com/180DAY-6d63b6d2daa5c775bc501f30901871d9/1440/456/Image/Png/noFilter");
+      background-repeat: repeat-y;
+      background-position: top center;
+      background-color: #000;
+
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding-bottom: 40px;
     }
 
     h1 {
       color: #00ffcc;
       font-size: 38px;
       margin-top: 15px;
+      text-align: center;
     }
 
     p.subtitle {
       color: #aaa;
       font-size: 18px;
+      text-align: center;
     }
 
     .group-pfp {
@@ -30,77 +44,128 @@
       height: 120px;
       border-radius: 50%;
       border: 3px solid #00ffcc;
-      margin-top: 10px;
+      display: block;
+      margin: 10px auto;
     }
 
+    /* 📱 STACKED GAME FEED */
     .games {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-top: 20px;
+      gap: 20px;
+      padding: 20px 0;
     }
 
     .game {
       background: #1b1b1b;
-      margin: 15px;
-      padding: 15px;
       width: 90%;
-      max-width: 350px;
+      max-width: 400px;
+      padding: 15px;
       border-radius: 15px;
       box-shadow: 0 0 10px #00ffcc55;
     }
 
-    .game img {
+    .game img.main {
       width: 100%;
       border-radius: 10px;
     }
 
-    .btn {
-      display: inline-block;
+    .game-pfp {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-top: 12px;
+      border: 4px solid #00ffcc;
+      object-fit: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h3 {
+      text-align: center;
       margin-top: 10px;
+    }
+
+    .btn {
+      display: block;
+      margin: 10px auto 0 auto;
       padding: 10px 15px;
       background: #00ffcc;
       color: black;
       text-decoration: none;
       border-radius: 10px;
       font-weight: bold;
+      width: fit-content;
+    }
+
+    .group-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 25px auto;
+      padding: 12px 18px;
+      width: 90%;
+      max-width: 300px;
+      background: #1b1b1bcc;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #00ffcc55;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .group-card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #00ffcc;
     }
   </style>
 </head>
 
 <body>
 
+<div class="overlay">
+
 <h1>Doodley Games 🎮</h1>
 <p class="subtitle">We make da ez games 😎</p>
 
-<!-- 👇 GROUP PFP -->
 <img class="group-pfp" src="https://tr.rbxcdn.com/180DAY-c7b1be888c7456863b0a7b9e88aeaf15/150/150/Image/Webp/noFilter">
 
-<p>Official Roblox Group Website</p>
+<p style="text-align:center;">Official Roblox Group Website</p>
 
-<!-- 🎮 GAMES -->
+<!-- 🎮 STACKED GAME CARDS -->
 <div class="games">
 
-  <!-- Game 1 -->
   <div class="game">
-    <img src="https://www.roblox.com/asset-thumbnail/image?assetId=87987474247515&width=768&height=432&format=png">
+    <img class="main" src="https://www.image2url.com/r2/default/images/1777069611117-e57ce78f-049d-4670-b920-0fa0e1adebaa.jpeg">
+
+    <img class="game-pfp" src="https://tr.rbxcdn.com/180DAY-28681434db9444755dcb7376d224fe18/150/150/Image/Webp/noFilter">
+
     <h3>Homeless Test</h3>
     <a class="btn" href="https://www.roblox.com/games/87987474247515" target="_blank">Play</a>
   </div>
 
-  <!-- Game 2 -->
   <div class="game">
-    <img src="https://www.roblox.com/asset-thumbnail/image?assetId=137926212841407&width=768&height=432&format=png">
+    <img class="main" src="https://www.image2url.com/r2/default/images/1777069436707-3027ca58-21cf-43dc-965c-fcee862aaac6.jpeg">
+
+    <img class="game-pfp" src="https://tr.rbxcdn.com/180DAY-9215dbdca36b3acce26b3553681457ca/150/150/Image/Webp/noFilter">
+
     <h3>Click for Brainrots</h3>
     <a class="btn" href="https://www.roblox.com/games/137926212841407" target="_blank">Play</a>
   </div>
 
 </div>
 
-<!-- 👥 GROUP -->
-<a class="btn" href="https://www.roblox.com/share/g/142614812" target="_blank">
-Join Group
+<a class="group-card" href="https://www.roblox.com/share/g/142614812" target="_blank">
+  <img src="https://tr.rbxcdn.com/180DAY-c7b1be888c7456863b0a7b9e88aeaf15/150/150/Image/Webp/noFilter">
+  Join Group
 </a>
+
+</div>
 
 </body>
 </html>
